@@ -1,0 +1,1 @@
+# Scratch-Detection-on-Text-Images
