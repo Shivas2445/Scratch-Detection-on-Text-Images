@@ -2,7 +2,6 @@
 Scratch Detection on Text Images
 Deep Learning-Based Quality Inspection System
 
-Technical Assignment — Mowito
 Author: Shivshankareppa
 
 📌 Project Overview
