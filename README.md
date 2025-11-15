@@ -96,8 +96,7 @@ s✔ A hybrid pipeline implementation
 
 📬 Contact
 
-If you need help running the models:
-
-Email: shivshankareppa23@gmail.com
+if you need help running the models:
+Email: shivas2445@gmail.com
 
 
