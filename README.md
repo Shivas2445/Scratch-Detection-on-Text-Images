@@ -2,8 +2,6 @@
 Scratch Detection on Text Images
 Deep Learning-Based Quality Inspection System
 
-Author: Shivshankareppa
-
 📌 Project Overview
 
 This repository contains a complete deep-learning pipeline designed to detect scratches on printed text images. The system performs:
