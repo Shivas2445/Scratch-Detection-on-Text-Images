@@ -24,31 +24,12 @@ Combines classifier confidence + scratch mask area to produce highly accurate fi
 
 This repository satisfies all the requirements listed by Mowito for their internship evaluation.
 
-📂 Repository Structure
-project-root/
-│
-├── Script/
-│   ├── classifier_inference.py
-│   ├── segmentation_inference.py
-│   ├── hybrid_inference.py
-│   ├── utils_preprocessing.py
-│   ├── utils_visualization.py
-│   ├── (other scripts used in training/testing)
-│
-├── models_weights/
-│   ├── efficientnet_b3_best.pt
-│   ├── unetpp_best.pt
-│   ├── hybrid_thresholds.json
-│
-├── results/
-│   ├── confusion_matrix.png
-│   ├── precision_recall_curve.png
-│   ├── sample_predictions/
-│   ├── segmentation_masks/
-│
-├── .gitignore
-├── README.md
-└── requirements.txt
+
+<p align="center">
+  <img src="results/images/Screenshot_2025-11-16_003323.png" width="700">
+</p>
+
+<p align="center"><b>Figure: Repository Structure Screenshot</b></p>
 
 🔧 Installation
 1️⃣ Install dependencies
