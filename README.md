@@ -22,14 +22,6 @@ For images classified or suspected as bad, a segmentation model identifies the s
 
 Combines classifier confidence + scratch mask area to produce highly accurate final decisions.
 
-This repository satisfies all the requirements listed by Mowito for their internship evaluation.
-
-
-<p align="center">
-  <img src="results/images/Screenshot_2025-11-16_003323.png" width="700">
-</p>
-
-<p align="center"><b>Figure: Repository Structure Screenshot</b></p>
 
 🔧 Installation
 1️⃣ Install dependencies
