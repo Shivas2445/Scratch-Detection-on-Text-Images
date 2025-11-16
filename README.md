@@ -64,9 +64,10 @@ Each threshold pair was assessed across the full test set using precision, recal
 ### ✅ Final Selected Thresholds (Best Performing)
 
 From the grid search, the optimal thresholds were found to be:
+- **USER_THRESHOLD =0.004484**
+- **CLASSIFIER_CONF_THRESHOLD =0.551579**
 
-USER_THRESHOLD = 0.004484
-CLASSIFIER_CONF_THRESHOLD = 0.551579
+
 
 ## 📈 Model Performance
 
