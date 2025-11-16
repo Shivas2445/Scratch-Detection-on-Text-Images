@@ -1,93 +1,113 @@
-Scratch-Detection-on-Text-Images
+# Scratch Detection on Text Images  
+### Deep Learning-Based Quality Inspection System
 
-Deep Learning-Based Quality Inspection System
+---
 
-📌 Project Overview
+## 📌 Project Overview
 
-This repository contains a complete deep-learning pipeline designed to detect scratches on printed text images. The system performs:
+This repository implements a complete deep-learning pipeline for detecting scratches on printed text images.  
+The system consists of three components:
 
-✅ 1. Image Classification using EfficientNet-B3
+---
 
-Predicts whether an input image is:
+## ✅ 1. Image Classification (EfficientNet-B3)
 
-Good (no scratches)
+Classifies an image as:
 
-Bad (contains scratches)
+- **Good** — No scratches  
+- **Bad** — Contains scratches  
 
-✅ 2. Scratch Segmentation using U-Net++
+---
 
-For images classified or suspected as bad, a segmentation model identifies the scratched region.
+## ✅ 2. Scratch Segmentation (U-Net++)
 
-✅ 3. Hybrid Decision Logic
+For images classified (or suspected) as *bad*, a U-Net++ model generates a segmentation mask to locate scratches.
 
-Combines classifier confidence + scratch mask area to produce highly accurate final decisions.
+---
+
+## ✅ 3. Hybrid Decision Logic
+
+The final decision is made by combining:
+
+- Classifier prediction confidence  
+- Scratch mask area from segmentation  
+
+This ensures an accurate and robust quality-inspection flow.
+
+---
+
 ## 🔧 Installation
 
 ```bash
 pip install -r requirements.txt
+```
 
+## 📈 Model Performance
 
-📈 Model Performance
-
-EfficientNet-B3 Classification
+### **EfficientNet-B3 Classification Results**
 
 | Metric          | Value  |
-| --------------- | ------ |
+|-----------------|--------|
 | Precision (Bad) | 1.0000 |
 | Recall (Bad)    | 0.9976 |
 | F1 Score (Bad)  | 0.9988 |
 | Accuracy        | 97.68% |
 
+### Additional Performance Visuals
 
-Confusion matrix and PR curve are available in:
+- `results/confusion_matrix.png`
+- `results/precision_recall_curve.png`
 
-results/confusion_matrix.png
+## 🧠 Hybrid Decision Logic
 
-results/precision_recall_curve.png
+### Thresholds Used
 
-🧠 Hybrid Decision Logic
-
-Thresholds used:
-
-USER_THRESHOLD = 0.005  
+USER_THRESHOLD = 0.005
 CLASSIFIER_CONF_THRESHOLD = 0.50
 
 
-Logic:
+### Decision Rules
 
-If classifier predicts bad confidently → BAD
+- If classifier predicts **Bad** with high confidence → **BAD**
+- Else if scratch mask area > threshold → **BAD**
+- Otherwise → **GOOD**
 
-If segmentation scratch area > threshold → BAD
+### Advantages
 
-Otherwise → GOOD
+- Ensures **high recall** (no bad images missed)
+- Ensures **high precision** (minimal false positives)
 
-This ensures:
+---
 
-No bad image is missed (high recall)
+## 📁 Dataset Disclaimer
 
-False positives are minimized (high precision)
+The dataset used for this task is private .
 
-📁 Dataset Disclaimer
+---
 
-The dataset used for this assignment is private and provided by Mowito.
-It is not included in this repository.
+## 🧾 Notes for Reviewer
 
-🧾 Notes for Reviewer
+This repository includes:
 
-This repository contains:
-✔ All scripts (training, evaluation, inference)
-✔ All trained model weights
-✔ A complete README with instructions
-✔ Results with visual output
-✔ A hybrid pipeline implementation
+- ✔ Complete training, evaluation, and inference scripts  
+- ✔ Pretrained model weights  
+- ✔ Well-structured README and installation instructions  
+- ✔ Visual results and plots  
+- ✔ End-to-end hybrid quality-inspection pipeline  
 
-🔗 View Full Work
+---
 
-You can view the full implementation and notebook here:
-👉 Kaggle Notebook: https://www.kaggle.com/code/shivashankar2445/scratch-detection-on-text-images
+## 🔗 View Full Work
 
+You can view the complete implementation here:
 
-📬 Contact
+👉 **Kaggle Notebook:**  
+https://www.kaggle.com/code/shivashankar2445/scratch-detection-on-text-images
 
-For help or clarifications:
-Email: shivas2445@gmail.com
+---
+
+## 📬 Contact
+
+For queries or clarifications:
+
+📧 Email: **shivas2445@gmail.com**
