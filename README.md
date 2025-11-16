@@ -48,14 +48,14 @@ git clone https://github.com/Shivas2445/Scratch-Detection-on-Text-Images.git
 
 ## 📈 Model Performance
 
-### **EfficientNet-B3 Classification Results**
+### **Hybrid Model Results**
 
 | Metric          | Value  |
 |-----------------|--------|
-| Precision (Bad) | 1.0000 |
-| Recall (Bad)    | 0.9976 |
-| F1 Score (Bad)  | 0.9988 |
-| Accuracy        | 97.68% |
+| Precision (Bad) | 0.9027|
+| Recall (Bad)    | 1.0000 |
+| F1 Score (Bad)  | 0.9499 |
+| Accuracy        | 97.87% |
 
 ### Additional Performance Visuals
 
