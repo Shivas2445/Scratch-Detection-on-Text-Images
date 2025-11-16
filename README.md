@@ -36,15 +36,37 @@ This ensures an accurate and robust quality-inspection flow.
 
 ---
 
-## 🔧 Installation
+### Thresholds Used
 
-```bash
-pip install -r requirements.txt
-```
-## To clone this repo
-```bash
-git clone https://github.com/Shivas2445/Scratch-Detection-on-Text-Images.git
-```
+- **USER_THRESHOLD = 0.005**
+- **CLASSIFIER_CONF_THRESHOLD = 0.50**
+
+### Decision Rules
+
+- If classifier predicts **BAD** and scratch area > threshold → **BAD**
+- If classifier predicts **BAD** but confidence < confidence threshold → **BAD**
+- If classifier predicts **BAD** with high confidence but scratch area < threshold → **GOOD**
+- If classifier predicts **GOOD** but scratch area > threshold → **BAD**
+- Otherwise → **GOOD**
+
+## 🔍 Threshold Optimization (Grid Search)
+
+A grid search was conducted to find the most effective thresholds for the hybrid decision pipeline.  
+The search evaluated hundreds of combinations of:
+
+- **Scratch Area Threshold (USER_THRESHOLD)**
+- **Classifier Confidence Threshold (CONF_THRESHOLD)**
+
+Each threshold pair was assessed across the full test set using precision, recall, F1-score, and accuracy.
+
+---
+
+### ✅ Final Selected Thresholds (Best Performing)
+
+From the grid search, the optimal thresholds were found to be:
+
+USER_THRESHOLD = 0.004484
+CLASSIFIER_CONF_THRESHOLD = 0.551579
 
 ## 📈 Model Performance
 
@@ -62,19 +84,6 @@ git clone https://github.com/Shivas2445/Scratch-Detection-on-Text-Images.git
 - `results/confusion_matrix.png`
 - `results/precision_recall_curve.png`
 
-## 🧠 Hybrid Decision Logic
-
-### Thresholds Used
-
-USER_THRESHOLD = 0.005
-CLASSIFIER_CONF_THRESHOLD = 0.50
-
-
-### Decision Rules
-
-- If classifier predicts **Bad** with high confidence → **BAD**
-- Else if scratch mask area > threshold → **BAD**
-- Otherwise → **GOOD**
 
 ### Advantages
 
@@ -82,6 +91,17 @@ CLASSIFIER_CONF_THRESHOLD = 0.50
 - Ensures **high precision** (minimal false positives)
 
 ---
+
+
+## 🔧 Installation
+
+```bash
+pip install -r requirements.txt
+```
+## To clone this repo
+```bash
+git clone https://github.com/Shivas2445/Scratch-Detection-on-Text-Images.git
+```
 
 ## 📁 Dataset Disclaimer
 
