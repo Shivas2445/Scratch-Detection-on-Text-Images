@@ -81,6 +81,11 @@ This repository contains:
 ✔ Results with visual output
 ✔ A hybrid pipeline implementation
 
+🔗 View Full Work
+
+You can view the full implementation and notebook here:
+👉 Kaggle Notebook: https://www.kaggle.com/code/shivashankar2445/scratch-detection-on-text-images
+
 
 📬 Contact
 
