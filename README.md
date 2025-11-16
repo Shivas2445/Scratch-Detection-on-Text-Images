@@ -41,6 +41,10 @@ This ensures an accurate and robust quality-inspection flow.
 ```bash
 pip install -r requirements.txt
 ```
+## To clone this repo
+```bash
+git clone https://github.com/Shivas2445/Scratch-Detection-on-Text-Images.git
+```
 
 ## 📈 Model Performance
 
